@@ -1,0 +1,28 @@
+#Lambda function Variables
+function_name = "AzureCopy"
+runtime_env_version = "python3.7"
+lambda_function_timeout = 120
+archive_file_type = "zip"
+archive_file_source_file = "AzureCopy.py"
+lambda_role = "azure_copy"
+lambda_policy = "test_policy"
+
+#ApiGateway
+api_gw_rest_name = "azureCopytf"
+api_gw_endpoint_confg = "REGIONAL"
+api_gw_resource_path_part = "azureCopy"
+api_gw_method_http_method = "PUT"
+api_gw_method_http_authorization = "NONE"
+api_gw_method_http_key_required = true
+api_gw_inegration_http_method = "PUT"
+api_gw_inegration_type = "AWS"
+api_gw_deployment_stage_name = "azureCopytf"
+api_gw_method_response_status_code = "200"
+
+api_gw_usage_plan_name = "azure_Plantf"
+api_gw_api_key = "azure_key"
+api_gw_usage_plan_key_type = "API_KEY"
+
+
+#Provider region
+region = "us-east-1"
