@@ -1,0 +1,29 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:eu-west-1:972185994518:*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:logs:eu-west-1:972185994518:log-group:/aws/lambda/AzureStorageCopy:*"
+            ]
+        },
+        {
+          "Effect": "Allow",
+          "Action": [
+              "s3:*",
+              "s3-object-lambda:*"
+          ],
+          "Resource": "*"
+      }
+
+    ]
+}
